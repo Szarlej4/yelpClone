@@ -141,7 +141,6 @@ table {
 =======================================================
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 *,
 *::before,
@@ -166,7 +165,6 @@ table {
     display: flex;
     align-items: center;
     justify-content: between;
-    background: yellow;
     margin: 2.5rem;
 }
 
@@ -178,23 +176,35 @@ table {
     margin-left: auto;
 }
 
+.nav__link {
+    margin-right: 1rem;
+    text-decoration: none;
+    color: white;
+    font-size: .9rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    padding: .5rem;
+}
+
 .button {
     cursor: pointer;
     color: white;
-    border-radius: .2rem;
-    font-family: 'Poppins', sans-serif;
+    border-radius: .25rem;
+    font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-weight: 600;
     font-size: 1rem;
-    padding: .6em 1em;
+    padding: .6em .9em;
+    margin-right: 1rem;
 }
 
 .button--white {
     background: none;
-    border: white 2px solid;
+    border: rgb(200, 201, 202) 2px solid;
 }
 
 .button--red {
-    margin-right: 1rem;
     background: red;
+    font-weight: 500;
     border: red 2px solid;
 }
 
@@ -205,5 +215,15 @@ table {
 }
 
 .hero {
-    background-image: url(https://s3-media0.fl.yelpcdn.com/educatorphoto/_tmAs95FomIea9WFlZ0tKA/o.jpg);
+    height: 20rem;
+}
+
+.hero__background-image {
+    height: 50rem;
+    width: 80%;
+    margin-left: 0;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    object-fit: none;
 }
