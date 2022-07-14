@@ -141,7 +141,6 @@ table {
 =======================================================
 */
 
-
 *,
 *::before,
 *::after {
@@ -151,14 +150,19 @@ table {
 
 .nav {
     position: absolute;
+    z-index: 10;
     top: 0;
     left: 0;
     width: 100%;
     height: 8rem;
-    background: blue;
     display: grid;
     grid-template-rows: 6rem 1fr;
     min-width: 1055px;
+    background: linear-gradient(180deg, #000000b3, #0000004d 72.92%, #0000);
+}
+
+.nav__logo {
+    margin-right: 2rem;
 }
 
 .nav__row-1 {
@@ -170,10 +174,65 @@ table {
 
 .search-block {
     background: orange;
-    max-width: 30%;
-    height: 2rem;
+    height: 3rem;
+    background: white;
+    border-radius: .25rem;
     flex: 1;
+    max-width: 59.6rem;
     margin-left: auto;
+    margin-right: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    align-items: center;
+}
+
+.search-block__input {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    height: 1.5rem;
+    border-radius: .5rem;
+}
+
+.search-block__input:focus {
+    border: none;
+    outline: none;
+}
+
+.search-block__search-input {
+    flex: 1;
+}
+
+.search-block__search-input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-block__break {
+    background-color: #ebebeb;
+    max-width: 2px;
+    flex: auto;
+    height: 1.5rem;
+}
+
+.search-block__find-button {
+    display: grid;
+    border-radius: 0 .25rem .25rem 0;
+    color: #fff;
+    height: 3rem;
+    width: 3.5rem;
+    padding: .75rem 1rem;
+    place-items: center;
+    cursor: pointer;
+    border: none;
+    background: red;
+}
+
+.find-button__svg {
+    fill: white;
 }
 
 .nav__link {
@@ -184,6 +243,7 @@ table {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     padding: .5rem;
+    white-space: nowrap;
 }
 
 .button {
@@ -195,6 +255,7 @@ table {
     font-size: 1rem;
     padding: .6em .9em;
     margin-right: 1rem;
+    white-space: nowrap;
 }
 
 .button--white {
@@ -219,11 +280,18 @@ table {
 }
 
 .hero__background-image {
-    height: 50rem;
-    width: 80%;
-    margin-left: 0;
+    object-fit: cover;
     position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
     top: 0;
+    bottom: 0;
     z-index: -1;
-    object-fit: none;
+}
+
+.slogan-box {
+    height: 42.6rem;
+    position: relative;
+    width: 100%;
 }
