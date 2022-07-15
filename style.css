@@ -143,7 +143,6 @@ table {
 
 body {
     overflow-x: hidden;
-    min-width: 1055px;
 }
 
 *,
@@ -330,6 +329,7 @@ body {
 
 .hero {
     background: linear-gradient(90deg, #0006, #0000001a 55%);
+    min-width: 1055px;
 }
 
 .hero__background-image {
@@ -402,6 +402,110 @@ body {
     grid-template-columns: min-content min-content;
     place-items: center;
     justify-content: center;
+}
+
+.recent-wrapper {
+    margin: 0 auto;
+    max-width: 1224px;
+    padding: 0 2.5rem;
+    width: 100%;
+}
+
+.recent {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    justify-items: center;
+}
+
+.recent__title {
+    margin-top: 3.8rem;
+    margin-bottom: 3.4rem;
+    font-family: 'Poppins';
+    font-size: 1.7rem;
+    color: rgb(45, 46, 47);
+    font-weight: 700;
+}
+
+.activities {
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+}
+
+.activity {
+    width: 100%;
+    height: 23.4rem;
+    background: orange;
+}
+
+.hr {
+    width: 100%;
+    height: 1px;
+    background: #ebebeb;
+}
+
+.categories-wrapper {
+    margin: auto;
+    padding: 0 2.5rem;
+    max-width: 1224px;
+    width: 100%;
+}
+
+.categories-section {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-width: 5px;
+    justify-items: center;
+}
+
+.categories-title {
+    margin-top: 3.8rem;
+    margin-bottom: 3.4rem;
+    font-family: 'Poppins';
+    font-size: 1.7rem;
+    color: rgb(45, 46, 47);
+    font-weight: 700;
+}
+
+.categories {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+    gap: 2.5rem;
+    width: 100%;
+}
+
+.category {
+    width: 100%;
+    height: 11.5rem;
+    background: orange;
+}
+
+.activities__link {
+    margin: 3rem auto 6.3rem auto;
+    align-self: start;
+    display: grid;
+    grid-template-columns: min-content min-content;
+    align-items: center;
+    gap: .5rem;
+    text-decoration: none;
+}
+
+.activities__link:hover {
+    text-decoration: underline;
+    text-decoration-color: #027a97;
+}
+
+.activities__link__svg {
+    fill: #027a97;
+}
+
+.activities__link__text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: .9rem;
+    font-weight: 600;
+    color: #027a97;
+    white-space: nowrap;
 }
 
 @keyframes opacity {
