@@ -143,6 +143,7 @@ table {
 
 body {
     overflow-x: hidden;
+    min-width: 1055px;
 }
 
 *,
@@ -161,7 +162,6 @@ body {
     height: 8rem;
     display: grid;
     grid-template-rows: 4.5rem 1fr;
-    min-width: 1055px;
     background: linear-gradient(180deg, #000000b3, #0000004d 72.92%, #0000);
 }
 
@@ -343,10 +343,65 @@ body {
     z-index: -1;
 }
 
-.slogan-box {
+.hero-slogan {
     height: 42.6rem;
-    position: relative;
     width: 100%;
+    position: relative;
+}
+
+.slogan-box {
+    width: min-content;
+    display: inline-grid;
+    grid-template-columns: calc(4rem + 10px) min-content;
+    place-items: center;
+    color: white;
+    font-family: 'Poppins';
+    position: absolute;
+    top: 12rem;
+    right: 71rem;
+}
+
+.slogan-box__lodaing-boxes {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.slogan-box__loading-box {
+    width: 10px;
+    height: 5.5rem;
+    background: white;
+    border-radius: .5rem;
+}
+
+.slogan-box__title-and-button {
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    align-items: start;
+}
+
+.slogan-box__title {
+    margin: 1rem 0 1.4rem 0;
+    font-size: 3rem;
+    font-weight: 700;
+    align-self: start;
+    white-space: nowrap;
+}
+
+.slogan-box__button-svg {
+    fill: white;
+}
+
+.button--slogan {
+    padding: .7rem 2rem;
+    width: min-content;
+    background: rgb(224, 7, 7);
+    display: grid;
+    gap: .5rem;
+    grid-template-columns: min-content min-content;
+    place-items: center;
+    justify-content: center;
 }
 
 @keyframes opacity {
@@ -359,8 +414,14 @@ body {
     }
 }
 
-@media only screen and (max-width: 1655px) {
+@media (max-width: 1655px) {
     .nav__row-2 {
         left: 9.5rem;
+    }
+}
+
+@media (max-width: 1538px) {
+    .slogan-box {
+        left: 0;
     }
 }
